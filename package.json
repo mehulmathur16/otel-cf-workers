@@ -21,7 +21,7 @@
 		"format": "prettier --ignore-unknown --write .",
 		"build-esm": "tsc",
 		"build-cjs": "tsc -p tsconfig-cjs.json",
-		"fix-dist": "echo '{\"type\": \"module\"}' > dist/esm/package.json && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
+		"fix-dist": "echo {\"type\": \"module\"} > dist/esm/package.json && echo {\"type\": \"commonjs\"} > dist/cjs/package.json",
 		"build": "pnpm clean && pnpm format && pnpm build-esm && pnpm build-cjs && pnpm fix-dist",
 		"preversion": "pnpm build",
 		"prepublishOnly": "pnpm build",
